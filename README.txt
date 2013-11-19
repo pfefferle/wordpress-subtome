@@ -33,6 +33,9 @@ No data is ever "leaked". The whole [SubToMe code](https://github.com/superfeedr
 
 == Changelog ==
 
+Project maintined on github at
+[pfefferle/wordpress-subtome](https://github.com/pfefferle/wordpress-subtome).
+
 = 1.5 =
 
 
