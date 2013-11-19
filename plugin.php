@@ -31,10 +31,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 class SubToMeWidget extends WP_Widget {
 
-  /*--------------------------------------------------*/
-  /* Constructor
-  /*--------------------------------------------------*/
-
   /**
    * Specifies the classname and description, instantiates the widget,
    * loads localization files, and includes necessary stylesheets and JavaScript.
@@ -48,15 +44,11 @@ class SubToMeWidget extends WP_Widget {
       'subtome',
       __( 'SubToMe' ),
       array(
-        'classname'		=>	'widget_subtome',
-        'description'	=>	__( 'Universal Subscribe Button.', 'subtome' )
+        'classname'   =>  'widget_subtome',
+        'description' =>  __( 'Universal Subscribe Button.', 'subtome' )
       )
     );
   } // end constructor
-
-  /*--------------------------------------------------*/
-  /* Widget API Functions
-  /*--------------------------------------------------*/
 
   /**
    * Outputs the content of the widget.
@@ -80,7 +72,7 @@ class SubToMeWidget extends WP_Widget {
     <?php
 
     echo $after_widget;
-	} // end widget
+  } // end widget
 
   /**
    * Processes the widget's options to be saved.
@@ -95,7 +87,6 @@ class SubToMeWidget extends WP_Widget {
     $instance['caption'] = attribute_escape($new_instance['caption']);
 
     return $instance;
-
   } // end widget
 
   /**

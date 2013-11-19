@@ -40,7 +40,7 @@ Project maintined on github at
 
 
 = 1.4 =
-* Updated README. More tests*
+* Updated README. More tests
 
 = 1.3 =
 * Simplified plugin
