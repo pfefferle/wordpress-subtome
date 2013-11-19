@@ -29,6 +29,18 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+// Pre-2.6 compatibility
+if ( ! defined( 'WP_CONTENT_URL' ) )
+    define( 'WP_CONTENT_URL', get_option( 'siteurl' ) . '/wp-content' );
+if ( ! defined( 'WP_CONTENT_DIR' ) )
+    define( 'WP_CONTENT_DIR', ABSPATH . 'wp-content' );
+if ( ! defined( 'WP_PLUGIN_URL' ) )
+    define( 'WP_PLUGIN_URL', WP_CONTENT_URL. '/plugins' );
+if ( ! defined( 'WP_PLUGIN_DIR' ) )
+    define( 'WP_PLUGIN_DIR', WP_CONTENT_DIR . '/plugins' );
+if ( ! defined( 'WP_ADMIN_URL' ) )
+    define( 'WP_ADMIN_URL', get_option('siteurl') . '/wp-admin' );
+
 class SubToMeWidget extends WP_Widget {
 
   /**
@@ -123,7 +135,7 @@ class SubToMePlugin {
    * @param array $atts
    * @return string
    */
-  function shortcode( $atts ) {
+  public static function shortcode( $atts ) {
     extract( shortcode_atts( array(
       'caption' => __('Subscribe', 'subtome')
     ), $atts ) );
@@ -134,10 +146,42 @@ class SubToMePlugin {
   /**
    * adds a link to the "meta" widget
    */
-  function meta_link() {
-    echo "<li><a href=\"#\" onclick=\"(function(){var z=document.createElement('script');z.src='https://www.subtome.com/load.js';document.body.appendChild(z);})(); return false;\">Subscribe</a></li>";
+  public static function meta_link() {
+    echo "<li><a href=\"#\" onclick=\"(function(){var z=document.createElement('script');z.src='https://www.subtome.com/load.js';document.body.appendChild(z);})(); return false;\">".__('Subscribe', 'subtome')."</a></li>";
   }
+  
+  public static function add_menu_item() {
+    add_options_page('SubToMe', 'SubToMe', 'administrator', 'subtome', array('SubToMePlugin', 'settings'));
+  }
+  
+  public static function settings() {
+    settings_fields('subtome_options');
+    do_settings_sections('subtome');
+  ?>
+<div class="wrap">
+  <img src="" alt="SubToMe" class="icon32" />
+
+  <h2><?php _e("SubToMe Settings"); ?></h2>
+  
+  <p></p>
+
+  <form action="options.php" method="post">
+  
+    <?php submit_button(); ?>
+  </form>
+
+  <h3>The shortcode</h3>
+</div>
+  <?php
+  }
+
+  public static function register_settings() {
+    register_setting('subtome_options','subtome_options');
+  }
+  
 }
 
 add_shortcode( 'subtome', array( 'SubToMePlugin', 'shortcode' ) );
 add_action( 'wp_meta', array( 'SubToMePlugin', 'meta_link' ) );
+add_action( 'admin_menu', array( 'SubToMePlugin', 'add_menu_item' ) );
+add_action( 'admin_init', array( 'SubToMePlugin', 'register_settings' ) );
