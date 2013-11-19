@@ -33,7 +33,7 @@ No data is ever "leaked". The whole [SubToMe code](https://github.com/superfeedr
 
 == Changelog ==
 
-== 1.4 = 
+= 1.4 =
 * Updated README. More tests*
 
 = 1.3 =
