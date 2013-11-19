@@ -61,8 +61,8 @@ class SubToMeWidget extends WP_Widget {
   /**
    * Outputs the content of the widget.
    *
-   * @param	array	args		The array of form elements
-   * @param	array	instance	The current instance of the widget
+   * @param	array args      The array of form elements
+   * @param	array instance  The current instance of the widget
    */
   public function widget( $args, $instance) {
 
@@ -85,8 +85,8 @@ class SubToMeWidget extends WP_Widget {
   /**
    * Processes the widget's options to be saved.
    *
-   * @param	array	new_instance	The previous instance of values before the update.
-   * @param	array	old_instance	The new instance of values to be generated via the update.
+   * @param	array new_instance  The previous instance of values before the update.
+   * @param	array old_instance  The new instance of values to be generated via the update.
    */
   public function update( $new_instance, $old_instance ) {
     $instance = $old_instance;
@@ -101,7 +101,7 @@ class SubToMeWidget extends WP_Widget {
   /**
    * Generates the administration form for the widget.
    *
-   * @param	array	instance	The array of keys and values for the widget.
+   * @param array instance  The array of keys and values for the widget.
    */
   public function form( $instance ) {
     $instance = wp_parse_args((array) $instance, array('title' => 'SubToMe', 'caption' => 'Subscribe'));
