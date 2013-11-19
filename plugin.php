@@ -42,7 +42,7 @@ class SubToMeWidget extends WP_Widget {
 
     parent::__construct(
       'subtome',
-      __( 'SubToMe' ),
+      __( 'SubToMe', 'subtome' ),
       array(
         'classname'   =>  'widget_subtome',
         'description' =>  __( 'Universal Subscribe Button.', 'subtome' )
@@ -125,7 +125,7 @@ class SubToMePlugin {
    */
   function shortcode( $atts ) {
     extract( shortcode_atts( array(
-      'caption' => 'Subscribe'
+      'caption' => __('Subscribe', 'subtome')
     ), $atts ) );
 
     return "<input type=\"button\" onclick=\"(function(){var z=document.createElement('script');z.src='https://www.subtome.com/load.js';document.body.appendChild(z);})()\" value=\"$caption\">";
