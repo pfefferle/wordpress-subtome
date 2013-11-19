@@ -1,5 +1,5 @@
 === SubToMe ===
-Version: 1.4
+Version: 1.5.0-dev
 Contributors: julien51, pfefferle
 Donate link: http://www.subtome.com/
 Requires at least: 3.3.1
@@ -32,6 +32,9 @@ No data is ever "leaked". The whole [SubToMe code](https://github.com/superfeedr
 [Wordpress Widget Boilerplate](https://github.com/tommcfarlin/WordPress-Widget-Boilerplate), [Matthias Pfefferle](http://notizblog.org/) for his precious help, mostly with version 1.3!
 
 == Changelog ==
+
+= 1.5 =
+
 
 = 1.4 =
 * Updated README. More tests*
