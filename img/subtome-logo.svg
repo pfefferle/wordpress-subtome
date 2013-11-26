@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="210mm"
+   height="297mm"
+   id="svg2">
+  <defs
+     id="defs4">
+    <clipPath
+       id="clipPath3018">
+      <path
+         d="m 0,92.929 309.6,0 L 309.6,0 0,0 0,92.929 z"
+         id="path3020" />
+    </clipPath>
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1">
+    <g
+       transform="matrix(1.25,0,0,-1.25,-279.2134,147.58579)"
+       id="g3012">
+      <g
+         id="g3014">
+        <g
+           clip-path="url(#clipPath3018)"
+           id="g3016">
+          <g
+             transform="translate(23.7119,40.6392)"
+             id="g3022" />
+          <g
+             transform="translate(69.5322,30.936)"
+             id="g3026" />
+          <g
+             transform="translate(98.0146,53.4185)"
+             id="g3030" />
+          <g
+             transform="translate(115.7705,63.4854)"
+             id="g3034" />
+          <g
+             transform="translate(150.6631,40.1641)"
+             id="g3038" />
+          <g
+             transform="translate(194.7998,70.8672)"
+             id="g3042" />
+          <g
+             transform="translate(246.5693,50.7061)"
+             id="g3046" />
+          <g
+             transform="translate(263.8525,73.4404)"
+             id="g3050">
+            <path
+               d="m 0,0 -7.886,-7.885 c 5.117,-5.116 7.928,-11.927 7.908,-19.177 -0.016,-7.163 -2.796,-13.912 -7.827,-19.044 l 7.887,-7.885 C 14.854,-39.001 14.844,-14.843 0,0"
+               id="path3052"
+               style="fill:#8bc53f;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+          </g>
+          <g
+             transform="translate(277.8398,87.4106)"
+             id="g3054">
+            <path
+               d="m 0,0 -7.886,-7.885 c 18.169,-18.17 18.153,-47.766 0.025,-66.122 l 7.883,-7.885 C 22.501,-59.19 22.518,-22.519 0,0"
+               id="path3056"
+               style="fill:#8bc53f;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
