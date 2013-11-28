@@ -330,7 +330,7 @@ class SubToMePlugin {
       		<td><input name="subtome_button_visibility_pages" type="checkbox" value="show" <?php checked(get_option("subtome_button_visibility_pages"), "show"); ?> /></td>
       	</tr>
       </table>
-      <p><?php _e("Don't forget to configure the", "subtome"); ?> <a href='/wp-admin/widgets.php'>widget</a>.</p>
+      <p><?php _e("Don't forget to configure the", "subtome"); ?> <a href="<?php echo admin_url("widgets.php"); ?>">widget</a>.</p>
     <?php submit_button(); ?>
   </form>
 
