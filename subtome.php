@@ -155,12 +155,14 @@ class SubToMePlugin {
   function extend_post($content) {
     $perma_link = get_permalink();
 
-    $button = self::generate_button(null, __('Follow this blog!', 'subtome'), __('Liked this post?', 'subtome'));
+    $button = self::generate_button();
 
-    if ((is_single() && get_option("subtome_button_visibility_posts", "hide") == "show") ||
+    if ((is_single() && get_option("subtome_button_visibility_posts", "show") == "show") ||
         (is_page() && get_option("subtome_button_visibility_pages", "hide") == "show") ||
         (!is_singular() && get_option("subtome_button_visibility_archives", "hide") == "show")) {
-      return $content . $button;
+
+      return $content . ' ' . $button . '';
+
     }
 
     return $content;
@@ -196,7 +198,11 @@ class SubToMePlugin {
 
     // set default caption if empty
     if (!$caption) {
-      $caption = __('Subscribe', 'subtome');
+      $caption = get_option("subtome_caption", "Follow");
+    }
+
+    if (!$description) {
+      $description = get_option("subtome_description", "Liked this post? Follow this blog to get more.");
     }
 
     // build button html
@@ -210,7 +216,7 @@ class SubToMePlugin {
         break;
     }
 
-    return $description . " " . $button;
+    return '<p class="subtome_description">' . $description . '&nbsp;' . $button . '</p> ';
   }
 
   /**
@@ -240,6 +246,8 @@ class SubToMePlugin {
 
   <h2><?php _e("SubToMe Settings", "subtome"); ?></h2>
 
+  <p><?php _e("SubToMe is a universal follow button for your blog. If you show the button, your readers will be able to follow your blog by picking the tool
+  of their choice.", "subtome"); ?></p>
 
   <h3><?php _e("Button style", "subtome"); ?></h3>
 
@@ -248,9 +256,20 @@ class SubToMePlugin {
       settings_fields('subtome_options');
       do_settings_sections('subtome_options');
     ?>
+    <p><?php _e("The button will blend into the CSS properties of your theme if you pick the default style.", "subtome"); ?></p>
     <table class="form-table subtome">
+      <tr>
+        <th><label><?php _e("Button Caption", "subtome"); ?></label></th>
+        <td><input name="subtome_caption" type="text" value="<?php echo get_option("subtome_caption", "Follow"); ?>" /> </td>
+      </tr>
+
+      <tr>
+        <th><label><?php _e("Button Description (displayed before the button)", "subtome"); ?></label></th>
+        <td><input name="subtome_description" type="text" value="<?php echo get_option("subtome_description", "Liked this post? Follow this blog to get more."); ?>" /> </td>
+      </tr>
+
     	<tr>
-    		<th><label><input name="subtome_button_type" type="radio" value="default" <?php checked(get_option("subtome_button_type", "default"), "default"); ?> /> <?php _e("Default", "subtome"); ?></label></th>
+    		<th><label><input name="subtome_button_type" type="radio" value="default" <?php checked(get_option("subtome_button_type", "default"), "default"); ?> /> <?php _e("Default (full HTML)", "subtome"); ?></label></th>
     		<td><?php echo self::generate_button("default"); ?></td>
     	</tr>
     	<tr>
@@ -260,7 +279,7 @@ class SubToMePlugin {
     </table>
 
     <h3><?php _e("Button visibility", "subtome"); ?></h3>
-
+    <p><?php _e("The button will be displayed at the end of each post on:", "subtome"); ?></p>
     <form method="post" action="options.php">
       <?php
         settings_fields('subtome_options');
@@ -268,24 +287,25 @@ class SubToMePlugin {
         do_settings_sections('subtome_options');
       ?>
       <table class="form-table subtome">
+        <tr>
+          <th><label><?php _e("Single posts (recommended)", "subtome"); ?></label></th>
+          <td><input name="subtome_button_visibility_posts" type="checkbox" value="show" <?php checked(get_option("subtome_button_visibility_posts"), "show"); ?> /></td>
+        </tr>
       	<tr>
-      		<th><label><?php _e("Show button on archive pages (home, archives, search, ...)", "subtome"); ?></label></th>
+      		<th><label><?php _e("Posts lists (archives, search, ...)", "subtome"); ?></label></th>
       		<td><input name="subtome_button_visibility_archives" type="checkbox" value="show" <?php checked(get_option("subtome_button_visibility_archives"), "show"); ?> /></td>
       	</tr>
       	<tr>
-      		<th><label><?php _e("Show button on single posts", "subtome"); ?></label></th>
-      		<td><input name="subtome_button_visibility_posts" type="checkbox" value="show" <?php checked(get_option("subtome_button_visibility_posts"), "show"); ?> /></td>
-      	</tr>
-      	<tr>
-      		<th><label><?php _e("Show button on single pages", "subtome"); ?></label></th>
+      		<th><label><?php _e("Single Pages", "subtome"); ?></label></th>
       		<td><input name="subtome_button_visibility_pages" type="checkbox" value="show" <?php checked(get_option("subtome_button_visibility_pages"), "show"); ?> /></td>
       	</tr>
       </table>
-
+      <p><?php _e("Don't forget to configure the", "subtome"); ?> <a href='/wp-admin/widgets.php'>widget</a>.</p>
     <?php submit_button(); ?>
   </form>
 
-  <h3>The shortcode</h3>
+<!--   <h3>The shortcode</h3>
+ -->
 </div>
 <?php
   }
@@ -298,6 +318,8 @@ class SubToMePlugin {
     register_setting('subtome_options','subtome_button_visibility_archives');
     register_setting('subtome_options','subtome_button_visibility_posts');
     register_setting('subtome_options','subtome_button_visibility_pages');
+    register_setting('subtome_options','subtome_caption');
+    register_setting('subtome_options','subtome_description');
   }
 }
 
