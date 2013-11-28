@@ -116,7 +116,7 @@ class SubToMeWidget extends WP_Widget {
    * @param array instance  The array of keys and values for the widget.
    */
   public function form( $instance ) {
-    $instance = wp_parse_args((array) $instance, array('title' => 'SubToMe', 'caption' => 'Subscribe', 'description' => null));
+    $instance = wp_parse_args((array) $instance, array('title' => __('SubToMe', 'subtome'), 'caption' => SubToMePlugin::get_button_caption(), 'description' => SubToMePlugin::get_button_description()));
 
     $title = strip_tags($instance['title']);
     $caption = strip_tags($instance['caption']);
@@ -202,7 +202,7 @@ class SubToMePlugin {
     // build button html
     switch ($type) {
       case "logo":
-        $button = "<img src=\"".WP_PLUGIN_URL."/subtome/img/subtome-button.svg\" onclick=\"$java_script\" alt=\"$caption\" style=\"height: 30px; width: auto; vertical-align: middle;\" />";
+        $button = "<img src=\"".WP_PLUGIN_URL."/subtome/img/subtome-button.svg\" onclick=\"$java_script\" alt=\"$caption\" style=\"vertical-align: middle;\" />";
         break;
       case "default":
       default:
@@ -210,7 +210,16 @@ class SubToMePlugin {
         break;
     }
 
-    return '<p class="subtome_description">' . $description . '&nbsp;' . $button . '</p> ';
+    $html = '<p class="subtome">';
+
+    // check if description is set
+    if ($description) {
+      $html .= "<span class=\"subtome-description\">$description</span>&nbsp;";
+    }
+
+    $html .=  $button . '</p> ';
+
+    return apply_filters("subtome_button", $html);
   }
 
   /**
