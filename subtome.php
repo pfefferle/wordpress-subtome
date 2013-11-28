@@ -196,14 +196,8 @@ class SubToMePlugin {
       $type = get_option("subtome_button_type", "default");
     }
 
-    // set default caption if empty
-    if (!$caption) {
-      $caption = get_option("subtome_caption", "Follow");
-    }
-
-    if (!$description) {
-      $description = get_option("subtome_description", "Liked this post? Follow this blog to get more.");
-    }
+    $caption = self::get_button_caption($caption);
+    $description = self::get_button_description($description);
 
     // build button html
     switch ($type) {
@@ -218,6 +212,35 @@ class SubToMePlugin {
 
     return '<p class="subtome_description">' . $description . '&nbsp;' . $button . '</p> ';
   }
+
+  /**
+   * returns the button-description
+   *
+   * @param string $description the description
+   * @return string
+   */
+  public static function get_button_description($description = null) {
+    if ($description) {
+      return $description;
+    } else {
+      return get_option("subtome_description", __("Liked this post? Follow this blog to get more.", "subtome"));
+    }
+  }
+
+  /**
+   * returns the button-caption
+   *
+   * @param string $caption the caption
+   * @return string
+   */
+  public static function get_button_caption($caption = null) {
+    if ($caption) {
+      return $caption;
+    } else {
+      return get_option("subtome_caption", __("Follow", "subtome"));
+    }
+  }
+
 
   /**
    * returns the SubToMe JS snippet
@@ -260,12 +283,12 @@ class SubToMePlugin {
     <table class="form-table subtome">
       <tr>
         <th><label><?php _e("Button Caption", "subtome"); ?></label></th>
-        <td><input name="subtome_caption" type="text" value="<?php echo get_option("subtome_caption", "Follow"); ?>" /> </td>
+        <td><input name="subtome_caption" type="text" value="<?php echo self::get_button_caption(); ?>" /> </td>
       </tr>
 
       <tr>
         <th><label><?php _e("Button Description (displayed before the button)", "subtome"); ?></label></th>
-        <td><input name="subtome_description" type="text" value="<?php echo get_option("subtome_description", "Liked this post? Follow this blog to get more."); ?>" /> </td>
+        <td><input name="subtome_description" type="text" value="<?php echo self::get_button_description(); ?>" /> </td>
       </tr>
 
     	<tr>
