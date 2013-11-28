@@ -265,8 +265,6 @@ class SubToMePlugin {
   public static function settings() {
 ?>
 <div class="wrap">
-  <img src="<?php echo WP_PLUGIN_URL; ?>/subtome/img/subtome-logo.png" alt="SubToMe" class="icon32" />
-
   <h2><?php _e("SubToMe Settings", "subtome"); ?></h2>
 
   <p><?php _e("SubToMe is a universal follow button for your blog. If you show the button, your readers will be able to follow your blog by picking the tool
