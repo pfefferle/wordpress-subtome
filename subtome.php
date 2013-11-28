@@ -176,10 +176,12 @@ class SubToMePlugin {
    */
   public static function shortcode( $atts ) {
     extract( shortcode_atts( array(
-      'caption' => __('Subscribe', 'subtome')
+      'type' => 'default',
+      'caption' => self::get_button_caption(),
+      'description' => ""
     ), $atts ) );
 
-    return self::get_button(null, $caption);
+    return self::generate_button($type, $caption, $description);
   }
 
   /**
@@ -334,8 +336,19 @@ class SubToMePlugin {
     <?php submit_button(); ?>
   </form>
 
-<!--   <h3>The shortcode</h3>
- -->
+  <h3><?php _e("Shortcode", "subtome"); ?></h3>
+
+  <p>You can also use the button anywhere in your posts with the SubToMe shortcode <code>[subtome]</code></p>
+
+  <p>The shortcode can be customized with the following attributes:</p>
+
+  <ul>
+    <li><code>type</code> - the look of the button. <code>default</code> is for the HTML-button and <code>logo</code> for the SubToMe image.</li>
+    <li><code>caption</code> - the caption of the button.</li>
+    <li><code>description</code> - a small description that will be displayed before the button.</li>
+  </ul>
+
+  <p>Full examle: <code>[subtome type="logo" caption="Follow!" description="Liked this post? Follow this blog to get more."]</code></p>
 </div>
 <?php
   }
