@@ -1,5 +1,5 @@
 === SubToMe ===
-Version: 1.5.0-dev
+Version: 1.5.0
 Contributors: julien51, pfefferle
 Donate link: http://www.subtome.com/
 Requires at least: 3.3.1
@@ -37,7 +37,8 @@ Project maintined on github at
 [pfefferle/wordpress-subtome](https://github.com/pfefferle/wordpress-subtome).
 
 = 1.5 =
-
+* A SubToMe button for posts/pages
+* More options to customize the button
 
 = 1.4 =
 * Updated README. More tests
