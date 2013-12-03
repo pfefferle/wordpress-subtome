@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SubToMe WordPress Widget\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-05 15:16+0100\n"
-"PO-Revision-Date: 2013-03-05 15:16+0100\n"
+"POT-Creation-Date: 2013-12-03 13:19+0100\n"
+"PO-Revision-Date: 2013-12-03 13:20+0100\n"
 "Last-Translator: Matthias Pfefferle <pfefferle@gmail.com>\n"
 "Language-Team: Julien Genestoux <julien@superfeedr.com>\n"
 "Language: en_US\n"
@@ -13,21 +13,130 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../plugin.php:49
+#: ../subtome.php:63 ../subtome.php:119
 msgid "SubToMe"
 msgstr ""
 
-#: ../plugin.php:52
+#: ../subtome.php:66
 msgid "Universal Subscribe Button."
 msgstr ""
 
-#: ../plugin.php:113
+#: ../subtome.php:125
 msgid "Title:"
 msgstr ""
 
-#: ../plugin.php:114
+#: ../subtome.php:126
 msgid "Caption:"
+msgstr ""
+
+#: ../subtome.php:127
+msgid "Description:"
+msgstr ""
+
+#: ../subtome.php:237
+msgid "Liked this post? Follow this blog to get more."
+msgstr ""
+
+#: ../subtome.php:251
+msgid "Follow"
+msgstr ""
+
+#: ../subtome.php:279
+msgid "SubToMe Settings"
+msgstr ""
+
+#: ../subtome.php:281
+msgid ""
+"SubToMe is a universal follow button for your blog. If you show the button, "
+"your readers will be able to follow your blog by picking the tool of their "
+"choice."
+msgstr ""
+
+#: ../subtome.php:283
+msgid "Button style"
+msgstr ""
+
+#: ../subtome.php:290
+msgid ""
+"The button will blend into the CSS properties of your theme if you pick the "
+"default style."
+msgstr ""
+
+#: ../subtome.php:293
+msgid "Button Caption"
+msgstr ""
+
+#: ../subtome.php:298
+msgid "Button Description (displayed before the button)"
+msgstr ""
+
+#: ../subtome.php:303
+msgid "Default (full HTML)"
+msgstr ""
+
+#: ../subtome.php:307
+msgid "Logo"
+msgstr ""
+
+#: ../subtome.php:312
+msgid "Button visibility"
+msgstr ""
+
+#: ../subtome.php:313
+msgid "The button will be displayed at the end of each post on:"
+msgstr ""
+
+#: ../subtome.php:322
+msgid "Single posts (recommended)"
+msgstr ""
+
+#: ../subtome.php:326
+msgid "Posts lists (archives, search, ...)"
+msgstr ""
+
+#: ../subtome.php:330
+msgid "Single Pages"
+msgstr ""
+
+#: ../subtome.php:334
+msgid "Don't forget to configure the"
+msgstr ""
+
+#: ../subtome.php:338
+msgid "Shortcode"
+msgstr ""
+
+#: ../subtome.php:340
+msgid ""
+"You can also use the button anywhere in your posts with the SubToMe "
+"shortcode <code>[subtome]</code>"
+msgstr ""
+
+#: ../subtome.php:342
+msgid "The shortcode can be customized with the following attributes:"
+msgstr ""
+
+#: ../subtome.php:345
+msgid ""
+"<code>type</code> - the look of the button. <code>default</code> is for the "
+"HTML-button and <code>logo</code> for the SubToMe image."
+msgstr ""
+
+#: ../subtome.php:346
+msgid "<code>caption</code> - the caption of the button."
+msgstr ""
+
+#: ../subtome.php:347
+msgid ""
+"<code>description</code> - a small description that will be displayed before "
+"the button."
+msgstr ""
+
+#: ../subtome.php:350
+msgid ""
+"Full examle: <code>[subtome type=\"logo\" caption=\"Follow!\" description="
+"\"Liked this post? Follow this blog to get more.\"]</code>"
 msgstr ""

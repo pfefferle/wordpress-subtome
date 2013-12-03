@@ -278,8 +278,7 @@ class SubToMePlugin {
 <div class="wrap">
   <h2><?php _e("SubToMe Settings", "subtome"); ?></h2>
 
-  <p><?php _e("SubToMe is a universal follow button for your blog. If you show the button, your readers will be able to follow your blog by picking the tool
-  of their choice.", "subtome"); ?></p>
+  <p><?php _e("SubToMe is a universal follow button for your blog. If you show the button, your readers will be able to follow your blog by picking the tool of their choice.", "subtome"); ?></p>
 
   <h3><?php _e("Button style", "subtome"); ?></h3>
 
@@ -338,17 +337,17 @@ class SubToMePlugin {
 
   <h3><?php _e("Shortcode", "subtome"); ?></h3>
 
-  <p>You can also use the button anywhere in your posts with the SubToMe shortcode <code>[subtome]</code></p>
+  <p><?php _e("You can also use the button anywhere in your posts with the SubToMe shortcode <code>[subtome]</code>", "subtome"); ?></p>
 
-  <p>The shortcode can be customized with the following attributes:</p>
+  <p><?php _e("The shortcode can be customized with the following attributes:", "subtome"); ?></p>
 
   <ul>
-    <li><code>type</code> - the look of the button. <code>default</code> is for the HTML-button and <code>logo</code> for the SubToMe image.</li>
-    <li><code>caption</code> - the caption of the button.</li>
-    <li><code>description</code> - a small description that will be displayed before the button.</li>
+    <li><?php _e("<code>type</code> - the look of the button. <code>default</code> is for the HTML-button and <code>logo</code> for the SubToMe image.", "subtome"); ?></li>
+    <li><?php _e("<code>caption</code> - the caption of the button.", "subtome"); ?></li>
+    <li><?php _e("<code>description</code> - a small description that will be displayed before the button.", "subtome"); ?></li>
   </ul>
 
-  <p>Full examle: <code>[subtome type="logo" caption="Follow!" description="Liked this post? Follow this blog to get more."]</code></p>
+  <p><?php _e("Full examle: <code>[subtome type=\"logo\" caption=\"Follow!\" description=\"Liked this post? Follow this blog to get more.\"]</code>", "subtome"); ?></p>
 </div>
 <?php
   }
