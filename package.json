@@ -1,0 +1,28 @@
+{
+	"name": "wordpress-subtome",
+	"version": "1.5.0",
+	"description": "",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/pfefferle/wordpress-subtome.git"
+	},
+	"author": {
+		"name": "Matthias Pfefferle",
+		"email": "pfefferle@gmail.com",
+		"web": "http://notizblog.org"
+	},
+	"devDependencies": {
+		"grunt": "~0.4.5",
+		"grunt-wp-readme-to-markdown": "~0.8.0",
+		"grunt-wp-i18n": "~0.4.9"
+	},
+	"license": "GPL",
+	"bugs": {
+		"url": "https://github.com/pfefferle/wordpress-subtome/issues"
+	},
+	"homepage": "https://github.com/pfefferle/wordpress-subtome",
+	"keywords": [
+		"subtome",
+		"wordpress"
+	]
+}
