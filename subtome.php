@@ -1,33 +1,32 @@
 <?php
-/*
-Plugin Name: SubToMe
-Plugin URI: http://www.subtome.com/
-Description: A plugin to integrate a SubToMe button to your blog. This button is a universal subscribe button and will let your readers pick the subscription tool of their choice.
-Version: 1.5.1-dev
-Author: Julien Genestoux
-Author URI: http://superfeedr.com/
-Author Email: julien@superfeedr.com
-Text Domain: subtome
-Domain Path: /lang/
-Network: false
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-Copyright 2013 Superfeedr (julien@superfeedr.com)
-
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License, version 2, as
-published by the Free Software Foundation.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA	02110-1301	USA
-*/
+/**
+ * Plugin Name: SubToMe
+ * Plugin URI: http://www.subtome.com/
+ * Description: A plugin to integrate a SubToMe button to your blog. This button is a universal subscribe button and will let your readers pick the subscription tool of their choice.
+ * Version: 1.5.1-dev
+ * Author: Julien Genestoux
+ * Author URI: http://superfeedr.com/
+ * Author Email: julien@superfeedr.com
+ * Text Domain: subtome
+ * Domain Path: /lang/
+ * Network: false
+ * License: GPLv2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Copyright 2013 Superfeedr (julien@superfeedr.com)
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License, version 2, as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public Licensealong with this program; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
+ */
 
 add_action( 'widgets_init', create_function( '', 'register_widget("SubToMeWidget");' ) );
 add_action( 'init', array( 'SubToMePlugin', 'init' ) );
