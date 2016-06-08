@@ -1,14 +1,14 @@
-# Copyright (C) 2015 Julien Genestoux
+# Copyright (C) 2016 Julien Genestoux
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
 "Project-Id-Version: SubToMe 1.5.1-dev\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/subtome\n"
-"POT-Creation-Date: 2015-09-10 07:03:09+00:00\n"
+"POT-Creation-Date: 2016-06-08 20:27:14+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.4.9\n"
@@ -17,122 +17,122 @@ msgstr ""
 msgid "SubToMe"
 msgstr ""
 
-#: subtome.php:57
+#: subtome.php:56
 msgid "Universal Subscribe Button."
 msgstr ""
 
-#: subtome.php:124
+#: subtome.php:123
 msgid "Title:"
 msgstr ""
 
-#: subtome.php:125
+#: subtome.php:124
 msgid "Caption:"
 msgstr ""
 
-#: subtome.php:126
+#: subtome.php:125
 msgid "Description:"
 msgstr ""
 
-#: subtome.php:243
+#: subtome.php:242
 msgid "Liked this post? Follow this blog to get more."
 msgstr ""
 
-#: subtome.php:257
+#: subtome.php:256
 msgid "Follow"
 msgstr ""
 
-#: subtome.php:285
+#: subtome.php:284
 msgid "SubToMe Settings"
 msgstr ""
 
-#: subtome.php:287
+#: subtome.php:286
 msgid ""
 "SubToMe is a universal follow button for your blog. If you show the button, "
 "your readers will be able to follow your blog by picking the tool of their "
 "choice."
 msgstr ""
 
-#: subtome.php:289
+#: subtome.php:288
 msgid "Button style"
 msgstr ""
 
-#: subtome.php:296
+#: subtome.php:295
 msgid ""
 "The button will blend into the CSS properties of your theme if you pick the "
 "default style."
 msgstr ""
 
-#: subtome.php:299
+#: subtome.php:298
 msgid "Button Caption"
 msgstr ""
 
-#: subtome.php:304
+#: subtome.php:303
 msgid "Button Description (displayed before the button)"
 msgstr ""
 
-#: subtome.php:309
+#: subtome.php:308
 msgid "Default (full HTML)"
 msgstr ""
 
-#: subtome.php:313
+#: subtome.php:312
 msgid "Logo"
 msgstr ""
 
-#: subtome.php:318
+#: subtome.php:317
 msgid "Button visibility"
 msgstr ""
 
-#: subtome.php:319
+#: subtome.php:318
 msgid "The button will be displayed at the end of each post on:"
 msgstr ""
 
-#: subtome.php:327
+#: subtome.php:326
 msgid "Single posts (recommended)"
 msgstr ""
 
-#: subtome.php:331
+#: subtome.php:330
 msgid "Posts lists (archives, search, ...)"
 msgstr ""
 
-#: subtome.php:335
+#: subtome.php:334
 msgid "Single Pages"
 msgstr ""
 
-#: subtome.php:339
+#: subtome.php:338
 msgid "Don't forget to configure the"
 msgstr ""
 
-#: subtome.php:343
+#: subtome.php:342
 msgid "Shortcode"
 msgstr ""
 
-#: subtome.php:345
+#: subtome.php:344
 msgid ""
 "You can also use the button anywhere in your posts with the SubToMe "
 "shortcode <code>[subtome]</code>"
 msgstr ""
 
-#: subtome.php:346
+#: subtome.php:345
 msgid "The shortcode can be customized with the following attributes:"
 msgstr ""
 
-#: subtome.php:349
+#: subtome.php:348
 msgid ""
 "<code>type</code> - the look of the button. <code>default</code> is for the "
 "HTML-button and <code>logo</code> for the SubToMe image."
 msgstr ""
 
-#: subtome.php:350
+#: subtome.php:349
 msgid "<code>caption</code> - the caption of the button."
 msgstr ""
 
-#: subtome.php:351
+#: subtome.php:350
 msgid ""
 "<code>description</code> - a small description that will be displayed "
 "before the button."
 msgstr ""
 
-#: subtome.php:354
+#: subtome.php:353
 msgid ""
 "Full examle: <code>[subtome type=\"logo\" caption=\"Follow!\" "
 "description=\"Liked this post? Follow this blog to get more.\"]</code>"
