@@ -3,7 +3,7 @@
  * Plugin Name: SubToMe
  * Plugin URI: http://www.subtome.com/
  * Description: A plugin to integrate a SubToMe button to your blog. This button is a universal subscribe button and will let your readers pick the subscription tool of their choice.
- * Version: 1.5.1-dev
+ * Version: 1.5.1
  * Author: Julien Genestoux
  * Author URI: http://superfeedr.com/
  * Author Email: julien@superfeedr.com
@@ -28,8 +28,8 @@
  * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-add_action( 'widgets_init', create_function( '', 'register_widget("SubToMeWidget");' ) );
 add_action( 'init', array( 'SubToMePlugin', 'init' ) );
+add_action( 'widgets_init', array( 'SubToMePlugin', 'register_widget' ) );
 
 /**
  * SubToMe widget class
@@ -61,8 +61,8 @@ class SubToMeWidget extends WP_Widget {
 	/**
 	 * Outputs the content of the widget.
 	 *
-	 * @param	array args			The array of form elements
-	 * @param	array instance	The current instance of the widget
+	 * @param array args		The array of form elements
+	 * @param array instance	The current instance of the widget
 	 */
 	public function widget( $args, $instance) {
 
@@ -88,8 +88,8 @@ class SubToMeWidget extends WP_Widget {
 	/**
 	 * Processes the widget's options to be saved.
 	 *
-	 * @param	array new_instance	The previous instance of values before the update.
-	 * @param	array old_instance	The new instance of values to be generated via the update.
+	 * @param array new_instance	The previous instance of values before the update.
+	 * @param array old_instance	The new instance of values to be generated via the update.
 	 */
 	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
@@ -146,7 +146,7 @@ class SubToMePlugin {
 	/**
 	 * Initialize the plugin, registering WordPress hooks.
 	 */
-	public function init() {
+	public static function init() {
 		add_shortcode( 'subtome', array( 'SubToMePlugin', 'shortcode' ) );
 		add_action( 'admin_menu', array( 'SubToMePlugin', 'add_menu_item' ) );
 		add_action( 'admin_init', array( 'SubToMePlugin', 'register_settings' ) );
@@ -154,12 +154,20 @@ class SubToMePlugin {
 	}
 
 	/**
+	 * Register SubToMe widget
+	 */
+	public static function register_widget() {
+		register_widget( 'SubToMeWidget' );
+	}
+
+	/**
 	 * add the button to the content
 	 *
 	 * @param string $content the post/page content
+	 *
 	 * @return string the post/page-code with the SubToMe button
 	 */
-	public static function extend_post($content) {
+	public static function extend_post( $content ) {
 		$perma_link = get_permalink();
 
 		$button = self::generate_button();
@@ -178,6 +186,7 @@ class SubToMePlugin {
 	 * adds a "subtome" shortcode
 	 *
 	 * @param array $atts
+	 *
 	 * @return string
 	 */
 	public static function shortcode( $atts ) {
@@ -233,6 +242,7 @@ class SubToMePlugin {
 	 * returns the button-description
 	 *
 	 * @param string $description the description
+	 *
 	 * @return string
 	 */
 	public static function get_button_description( $description = null ) {
@@ -244,9 +254,10 @@ class SubToMePlugin {
 	}
 
 	/**
-	 * returns the button-caption
+	 * Returns the button-caption
 	 *
 	 * @param string $caption the caption
+	 *
 	 * @return string
 	 */
 	public static function get_button_caption( $caption = null ) {
@@ -259,7 +270,7 @@ class SubToMePlugin {
 
 
 	/**
-	 * returns the SubToMe JS snippet
+	 * Returns the SubToMe JS snippet
 	 *
 	 * @return string the SubToMe JS snippet
 	 */
@@ -276,10 +287,10 @@ class SubToMePlugin {
 	}
 
 	/**
-	 * settings page
+	 * Settings page
 	 */
 	public static function settings() {
-?>
+	?>
 <div class="wrap">
 	<h2><?php _e( 'SubToMe Settings', 'subtome' ); ?></h2>
 
@@ -352,11 +363,11 @@ class SubToMePlugin {
 
 	<p><?php _e( 'Full examle: <code>[subtome type="logo" caption="Follow!" description="Liked this post? Follow this blog to get more."]</code>', 'subtome' ); ?></p>
 </div>
-<?php
+	<?php
 	}
 
 	/**
-	 * register SubToMe options
+	 * Register SubToMe options
 	 */
 	public static function register_settings() {
 		register_setting( 'subtome_options', 'subtome_button_type' );
