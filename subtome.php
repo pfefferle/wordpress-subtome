@@ -3,7 +3,7 @@
  * Plugin Name: SubToMe
  * Plugin URI: http://www.subtome.com/
  * Description: A plugin to integrate a SubToMe button to your blog. This button is a universal subscribe button and will let your readers pick the subscription tool of their choice.
- * Version: 1.5.1
+ * Version: 1.5.2
  * Author: Julien Genestoux
  * Author URI: http://superfeedr.com/
  * Author Email: julien@superfeedr.com
@@ -218,7 +218,7 @@ class SubToMePlugin {
 		// build button html
 		switch ( $type ) {
 			case 'logo':
-				$button = '<img src="' . plugins_url( 'subtome/img/subtome-button.svg', __FILE__ ) . '" onclick="' . $java_script . '" alt="' . $caption . '" style="vertical-align: middle;" />';
+				$button = '<img src="' . plugins_url( 'img/subtome-button.svg', __FILE__ ) . '" onclick="' . $java_script . '" alt="' . $caption . '" style="vertical-align: middle;" />';
 				break;
 			case 'default':
 			default:
