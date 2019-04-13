@@ -3,7 +3,7 @@
  * Plugin Name: SubToMe
  * Plugin URI: http://www.subtome.com/
  * Description: A plugin to integrate a SubToMe button to your blog. This button is a universal subscribe button and will let your readers pick the subscription tool of their choice.
- * Version: 1.5.2
+ * Version: 1.5.3
  * Author: Julien Genestoux
  * Author URI: http://superfeedr.com/
  * Author Email: julien@superfeedr.com
@@ -21,7 +21,7 @@
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	See the
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public Licensealong with this program; if not, write to the Free
@@ -52,7 +52,7 @@ class SubToMeWidget extends WP_Widget {
 			'subtome',
 			__( 'SubToMe', 'subtome' ),
 			array(
-				'classname' => 'widget_subtome',
+				'classname'   => 'widget_subtome',
 				'description' => __( 'Universal Subscribe Button.', 'subtome' ),
 			)
 		);
@@ -61,15 +61,15 @@ class SubToMeWidget extends WP_Widget {
 	/**
 	 * Outputs the content of the widget.
 	 *
-	 * @param array args		The array of form elements
-	 * @param array instance	The current instance of the widget
+	 * @param array $args     The array of form elements
+	 * @param array $instance The current instance of the widget
 	 */
-	public function widget( $args, $instance) {
+	public function widget( $args, $instance ) {
 
 		extract( $args, EXTR_SKIP );
 
-		$title = empty( $instance['title'] ) ? '' : $instance['title'];
-		$caption = empty( $instance['caption'] ) ? 'Subscribe' : $instance['caption'];
+		$title       = empty( $instance['title'] ) ? '' : $instance['title'];
+		$caption     = empty( $instance['caption'] ) ? 'Subscribe' : $instance['caption'];
 		$description = empty( $instance['description'] ) ? null : $instance['description'];
 
 		echo $before_widget;
@@ -88,14 +88,14 @@ class SubToMeWidget extends WP_Widget {
 	/**
 	 * Processes the widget's options to be saved.
 	 *
-	 * @param array new_instance	The previous instance of values before the update.
-	 * @param array old_instance	The new instance of values to be generated via the update.
+	 * @param array $new_instance The previous instance of values before the update.
+	 * @param array $old_instance The new instance of values to be generated via the update.
 	 */
 	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 
-		$instance['title'] = attribute_escape( $new_instance['title'] );
-		$instance['caption'] = attribute_escape( $new_instance['caption'] );
+		$instance['title']       = attribute_escape( $new_instance['title'] );
+		$instance['caption']     = attribute_escape( $new_instance['caption'] );
 		$instance['description'] = attribute_escape( $new_instance['description'] );
 
 		return $instance;
@@ -104,20 +104,20 @@ class SubToMeWidget extends WP_Widget {
 	/**
 	 * Generates the administration form for the widget.
 	 *
-	 * @param array instance	The array of keys and values for the widget.
+	 * @param array $instance The array of keys and values for the widget.
 	 */
 	public function form( $instance ) {
 		$instance = wp_parse_args(
 			(array) $instance,
 			array(
-				'title' => __( 'SubToMe', 'subtome' ),
-				'caption' => SubToMePlugin::get_button_caption(),
+				'title'       => __( 'SubToMe', 'subtome' ),
+				'caption'     => SubToMePlugin::get_button_caption(),
 				'description' => SubToMePlugin::get_button_description(),
 			)
 		);
 
-		$title = strip_tags( $instance['title'] );
-		$caption = strip_tags( $instance['caption'] );
+		$title       = strip_tags( $instance['title'] );
+		$caption     = strip_tags( $instance['caption'] );
 		$description = strip_tags( $instance['description'] );
 		?>
 		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'subtome' ); ?></label> <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" /></p>
@@ -148,6 +148,7 @@ class SubToMePlugin {
 	 */
 	public static function init() {
 		add_shortcode( 'subtome', array( 'SubToMePlugin', 'shortcode' ) );
+
 		add_action( 'admin_menu', array( 'SubToMePlugin', 'add_menu_item' ) );
 		add_action( 'admin_init', array( 'SubToMePlugin', 'register_settings' ) );
 		add_action( 'the_content', array( 'SubToMePlugin', 'extend_post' ), 99 );
@@ -168,14 +169,13 @@ class SubToMePlugin {
 	 * @return string the post/page-code with the SubToMe button
 	 */
 	public static function extend_post( $content ) {
-		$perma_link = get_permalink();
-
 		$button = self::generate_button();
 
-		if ( ( is_single() && get_option( 'subtome_button_visibility_posts', 'show' ) == 'show' ) ||
-				( is_page() && get_option( 'subtome_button_visibility_pages', 'hide' ) == 'show' ) ||
-				( ! is_singular() && get_option( 'subtome_button_visibility_archives', 'hide' ) == 'show' ) ) {
-
+		if (
+			( is_single() && get_option( 'subtome_button_visibility_posts', 'show' ) == 'show' ) ||
+			( is_page() && get_option( 'subtome_button_visibility_pages', 'hide' ) == 'show' ) ||
+			( ! is_singular() && get_option( 'subtome_button_visibility_archives', 'hide' ) == 'show' )
+		) {
 			return $content . ' ' . $button . '';
 		}
 
@@ -191,8 +191,8 @@ class SubToMePlugin {
 	 */
 	public static function shortcode( $atts ) {
 		extract( shortcode_atts( array(
-			'type' => 'default',
-			'caption' => self::get_button_caption(),
+			'type'        => 'default',
+			'caption'     => self::get_button_caption(),
 			'description' => '',
 		), $atts ) );
 
@@ -204,7 +204,7 @@ class SubToMePlugin {
 	 *
 	 * @return string the HTML code
 	 */
-	public static function generate_button($type = null, $caption = null, $description = null) {
+	public static function generate_button( $type = null, $caption = null, $description = null ) {
 		$java_script = self::get_javascript();
 
 		// set default type if empty
@@ -212,7 +212,7 @@ class SubToMePlugin {
 			$type = get_option( 'subtome_button_type', 'default' );
 		}
 
-		$caption = self::get_button_caption( $caption );
+		$caption     = self::get_button_caption( $caption );
 		$description = self::get_button_description( $description );
 
 		// build button html
@@ -276,7 +276,7 @@ class SubToMePlugin {
 	 */
 	public static function get_javascript() {
 		// to be able to filter the javascript code
-		return apply_filters( 'subtome_javascript', '(function(){var z=document.createElement("script");z.src="https://www.subtome.com/load.js";document.body.appendChild(z);})()' );
+		return apply_filters( 'subtome_javascript', "(function(){var z=document.createElement('script');z.src='https://www.subtome.com/load.js';document.body.appendChild(z);})()" );
 	}
 
 	/**
@@ -290,7 +290,7 @@ class SubToMePlugin {
 	 * Settings page
 	 */
 	public static function settings() {
-	?>
+		?>
 <div class="wrap">
 	<h2><?php _e( 'SubToMe Settings', 'subtome' ); ?></h2>
 
@@ -363,7 +363,7 @@ class SubToMePlugin {
 
 	<p><?php _e( 'Full examle: <code>[subtome type="logo" caption="Follow!" description="Liked this post? Follow this blog to get more."]</code>', 'subtome' ); ?></p>
 </div>
-	<?php
+		<?php
 	}
 
 	/**
