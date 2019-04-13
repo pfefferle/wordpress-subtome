@@ -36,7 +36,7 @@ No data is ever "leaked". The whole [SubToMe code](https://github.com/superfeedr
 Project maintined on github at
 [pfefferle/wordpress-subtome](https://github.com/pfefferle/wordpress-subtome).
 
-= 1.5.2 =
+= 1.5.3 =
 
 * WordPress coding standard fixes
 * fixed JS bug
