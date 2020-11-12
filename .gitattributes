@@ -1,0 +1,11 @@
+.git export-ignore
+.gitignore export-ignore
+.github export-ignore
+.gitattributes export-ignore
+.wordpress-org export-ignore
+.editorconfig export-ignore
+package.json export-ignore
+phpcs.xml export-ignore
+docker-compose.yml export-ignore
+Gruntfile.js export-ignore
+README.md export-ignore
