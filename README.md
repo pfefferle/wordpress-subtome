@@ -3,8 +3,8 @@
 **Contributors:** [julien51](https://profiles.wordpress.org/julien51), [pfefferle](https://profiles.wordpress.org/pfefferle)  
 **Donate link:** http://www.subtome.com/  
 **Requires at least:** 3.3.1  
-**Tested up to:** 5.7  
-**Stable tag:** 1.5.4  
+**Tested up to:** 5.8  
+**Stable tag:** 1.5.5  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 **Tags:** SubToMe, Follow, Follow Button, Subscribe, Subscribe Button, RSS, Follow RSS, RSS Button, widget, subscribe, subscription, sidebar, button, feed, follow feed, subscribe feed, feeds, javascript  
@@ -33,8 +33,11 @@ No data is ever "leaked". The whole [SubToMe code](https://github.com/superfeedr
 
 ## Changelog ##
 
-Project maintined on github at
-[pfefferle/wordpress-subtome](https://github.com/pfefferle/wordpress-subtome).
+Project maintined on github at [pfefferle/wordpress-subtome](https://github.com/pfefferle/wordpress-subtome).
+
+### 1.5.5 ###
+
+* version update
 
 ### 1.5.4 ###
 
