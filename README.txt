@@ -1,5 +1,4 @@
 === SubToMe ===
-Version: 1.5.2
 Contributors: julien51, pfefferle
 Donate link: http://www.subtome.com/
 Requires at least: 3.3.1

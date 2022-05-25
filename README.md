@@ -1,5 +1,4 @@
 # SubToMe #
-**Version:** 1.5.2  
 **Contributors:** [julien51](https://profiles.wordpress.org/julien51/), [pfefferle](https://profiles.wordpress.org/pfefferle/)  
 **Donate link:** http://www.subtome.com/  
 **Requires at least:** 3.3.1  
