@@ -1,6 +1,5 @@
 {
 	"name": "wordpress-subtome",
-	"version": "1.5.0",
 	"description": "",
 	"repository": {
 		"type": "git",
@@ -9,12 +8,12 @@
 	"author": {
 		"name": "Matthias Pfefferle",
 		"email": "pfefferle@gmail.com",
-		"web": "http://notizblog.org"
+		"web": "https://notiz.blog"
 	},
 	"devDependencies": {
 		"grunt": "~1.6.1",
-		"grunt-wp-readme-to-markdown": "~2.1.0",
-		"grunt-wp-i18n": "~1.0.3"
+		"grunt-wp-i18n": "~1.0.3",
+		"grunt-wp-readme-to-markdown": "~2.1.0"
 	},
 	"license": "GPL",
 	"bugs": {
