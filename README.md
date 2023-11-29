@@ -2,7 +2,7 @@
 **Contributors:** [julien51](https://profiles.wordpress.org/julien51/), [pfefferle](https://profiles.wordpress.org/pfefferle/)  
 **Donate link:** http://www.subtome.com/  
 **Requires at least:** 3.3.1  
-**Tested up to:** 6.3  
+**Tested up to:** 6.4  
 **Stable tag:** 1.5.6  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
