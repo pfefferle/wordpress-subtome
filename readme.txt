@@ -6,7 +6,7 @@ Tested up to: 6.5
 Stable tag: 1.5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: SubToMe, Follow, Follow Button, Subscribe, Subscribe Button, RSS, Follow RSS, RSS Button, widget, subscribe, subscription, sidebar, button, feed, follow feed, subscribe feed, feeds, javascript
+Tags: SubToMe, Follow, Subscribe, RSS, Feed
 
 This widget adds a SubToMe button to your blog and allows people to subscribe to your content in one click.
 
