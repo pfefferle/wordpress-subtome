@@ -7,4 +7,4 @@
 package.json export-ignore
 phpcs.xml export-ignore
 .wp-env.json export-ignore
-README.md export-ignore
+.distignore export-ignore
