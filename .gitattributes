@@ -6,6 +6,5 @@
 .editorconfig export-ignore
 package.json export-ignore
 phpcs.xml export-ignore
-docker-compose.yml export-ignore
-Gruntfile.js export-ignore
+.wp-env.json export-ignore
 README.md export-ignore
