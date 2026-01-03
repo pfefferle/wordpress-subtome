@@ -1,16 +1,17 @@
-# SubToMe #
-**Contributors:** [julien51](https://profiles.wordpress.org/julien51/), [pfefferle](https://profiles.wordpress.org/pfefferle/)  
-**Donate link:** http://www.subtome.com/  
-**Requires at least:** 3.3.1  
-**Tested up to:** 6.6  
-**Stable tag:** 1.5.6  
-**License:** GPLv2 or later  
-**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
-**Tags:** SubToMe, Follow, Subscribe, RSS, Feed  
+# SubToMe
+
+- Contributors: julien51, pfefferle
+- Donate link: http://www.subtome.com/
+- Requires at least: 3.3.1
+- Tested up to: 6.6
+- Stable tag: 1.5.6
+- License: GPLv2 or later
+- License URI: http://www.gnu.org/licenses/gpl-2.0.html
+- Tags: SubToMe, Follow, Subscribe, RSS, Feed
 
 This widget adds a SubToMe button to your blog and allows people to subscribe to your content in one click.
 
-## Description ##
+## Description
 
 This widget adds a [SubToMe](http://www.subtome.com/) button to your WordPress blog. This button allows your readers to follow your blog using their **favorite** applications.
 
@@ -20,51 +21,51 @@ The user information is stored in the browser, but is only accessible on the dom
 
 No data is ever "leaked". The whole [SubToMe code](https://github.com/superfeedr/subtome) is open source. Feel free to check it out by yourself.
 
-## Installation ##
+## Installation
 
 1. Upload the plugin directory to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 2. Add the widget to your layout from the 'Widget' submenu in WordPress
 
-## Credits ##
+## Credits
 
 [WordPress Widget Boilerplate](https://github.com/tommcfarlin/WordPress-Widget-Boilerplate), [Matthias Pfefferle](http://notizblog.org/) for his precious help, mostly with version 1.3!
 
-## Changelog ##
+## Changelog
 
 Project maintined on github at [pfefferle/wordpress-subtome](https://github.com/pfefferle/wordpress-subtome).
 
-### 1.5.5 ###
+### 1.5.5
 
 * version update
 
-### 1.5.4 ###
+### 1.5.4
 
 * version update
 
-### 1.5.3 ###
+### 1.5.3
 
 * WordPress coding standard fixes
 * fixed JS bug
 
-### 1.5.1 ###
+### 1.5.1
 
 * fixed PHP warnings
 
-### 1.5 ###
+### 1.5
 
 * A SubToMe button for posts/pages
 * More options to customize the button
 
-### 1.4 ###
+### 1.4
 
 * Updated README. More tests
 
-### 1.3 ###
+### 1.3
 
 * Simplified plugin
 * Added shortcode
 
-### 1.0 ###
+### 1.0
 
 * First version
