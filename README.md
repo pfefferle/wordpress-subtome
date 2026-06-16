@@ -3,8 +3,9 @@
 - Contributors: julien51, pfefferle
 - Donate link: http://www.subtome.com/
 - Requires at least: 3.3.1
-- Tested up to: 6.6
+- Tested up to: 7.0
 - Stable tag: 1.5.6
+- Requires PHP: 7.4
 - License: GPLv2 or later
 - License URI: http://www.gnu.org/licenses/gpl-2.0.html
 - Tags: SubToMe, Follow, Subscribe, RSS, Feed
