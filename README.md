@@ -3,7 +3,7 @@
 - Contributors: julien51, pfefferle
 - Donate link: http://www.subtome.com/
 - Requires at least: 3.3.1
-- Tested up to: 7.0
+- Tested up to: 7.1
 - Stable tag: 1.5.6
 - Requires PHP: 7.4
 - License: GPLv2 or later
